@@ -1,5 +1,7 @@
 ﻿using Core.Application.Requests;
 using ECommerce.Application.Features.Categories.Commands.Create;
+using ECommerce.Application.Features.Categories.Commands.Delete;
+using ECommerce.Application.Features.Categories.Queries.GetById;
 using ECommerce.Application.Features.Categories.Queries.GetList;
 using ECommerce.Application.Features.Categories.Queries.GetListByPaginate;
 using MediatR;
@@ -47,5 +49,18 @@ public class CategoriesController : ControllerBase
 
         return Ok(response);
 
+    }
+
+    [HttpGet("getbyid")]
+    public async Task<IActionResult> GetById([FromQuery] int id) =>
+         Ok(await _mediator.Send(new GetByIdCategoryQuery { Id = id }));
+
+
+    [HttpDelete("delete")]
+    public async Task<IActionResult> Delete([FromQuery] int id)
+    {
+        var command = new DeleteCategoryCommand { Id = id };
+        await _mediator.Send(command);
+        return Ok(command);
     }
 }

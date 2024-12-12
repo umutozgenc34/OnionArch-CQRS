@@ -8,14 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
     <PackageReference Include="MediatR" Version="12.4.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Categories\Commands\Delete\" />
     <Folder Include="Features\Categories\Commands\Update\" />
-    <Folder Include="Features\Categories\Constants\" />
-    <Folder Include="Features\Categories\Rules\" />
   </ItemGroup>
 
   <ItemGroup>
