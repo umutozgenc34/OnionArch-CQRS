@@ -2,8 +2,8 @@
 
 using Core.CrossCuttingConcerns.Exceptions.ExceptionTypes;
 using ECommerce.Application.Features.Categories.Constants;
-using ECommerce.Persistence.Abstracts;
-using ECommerce.Persistence.Concretes;
+using ECommerce.Application.Services.Repositories;
+
 
 namespace ECommerce.Application.Features.Categories.Rules;
 

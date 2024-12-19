@@ -1,13 +1,14 @@
 ﻿
 using AutoMapper;
+using Core.Application.Pipelines.Login;
 using ECommerce.Application.Features.Categories.Rules;
+using ECommerce.Application.Services.Repositories;
 using ECommerce.Domain.Entities;
-using ECommerce.Persistence.Abstracts;
 using MediatR;
 
 namespace ECommerce.Application.Features.Categories.Commands.Create;
 
-public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>
+public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>, ILoginRequest
 {
     public string Name { get; set; }
 
