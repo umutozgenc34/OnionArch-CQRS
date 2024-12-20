@@ -8,7 +8,7 @@ using MediatR;
 
 namespace ECommerce.Application.Features.Categories.Commands.Create;
 
-public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>, ILoginRequest
+public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>/*, ILoginRequest*/
 {
     public string Name { get; set; }
 

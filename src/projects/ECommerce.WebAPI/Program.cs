@@ -1,4 +1,5 @@
 using Core.CrossCuttingConcerns.Exceptions.Extensions;
+using Core.Security;
 using ECommerce.Application;
 using ECommerce.Persistence;
 
@@ -9,13 +10,15 @@ builder.Services.AddControllers();
 builder.Services.AddApplicationServiceDependencies();
 builder.Services.AddPersistenceServices(builder.Configuration);
 
+builder.Services.AddSecurityServices();
+
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.ConfigureCustomExceptionMiddleware();
+//app.ConfigureCustomExceptionMiddleware();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
