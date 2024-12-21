@@ -17,13 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.CrossCuttingConcerns",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projects", "projects", "{D733B73B-7E07-4513-A6B7-2BB4A5FA0530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Domain", "src\projects\ECommerce.Domain\ECommerce.Domain.csproj", "{208D4313-477F-4ADE-A767-769267795148}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Domain", "src\projects\ECommerce.Domain\ECommerce.Domain.csproj", "{208D4313-477F-4ADE-A767-769267795148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Persistence", "src\projects\ECommerce.Persistence\ECommerce.Persistence.csproj", "{D44A032E-C6C5-4D86-8CAA-29DDF4A2658A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Persistence", "src\projects\ECommerce.Persistence\ECommerce.Persistence.csproj", "{D44A032E-C6C5-4D86-8CAA-29DDF4A2658A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Application", "src\projects\ECommerce.Application\ECommerce.Application.csproj", "{CFCBB191-043C-4F81-A062-412CA1A82741}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Application", "src\projects\ECommerce.Application\ECommerce.Application.csproj", "{CFCBB191-043C-4F81-A062-412CA1A82741}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.WebAPI", "src\projects\ECommerce.WebAPI\ECommerce.WebAPI.csproj", "{1A0E55F9-29EC-45F8-9A10-042CEDC4F707}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.WebAPI", "src\projects\ECommerce.WebAPI\ECommerce.WebAPI.csproj", "{1A0E55F9-29EC-45F8-9A10-042CEDC4F707}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,7 @@
 ﻿
 using AutoMapper;
 using Core.Application.Pipelines.Authorization;
+using Core.Application.Pipelines.Logging;
 using Core.Application.Pipelines.Login;
 using Core.Security.Constants;
 using ECommerce.Application.Features.Categories.Rules;
@@ -10,7 +11,7 @@ using MediatR;
 
 namespace ECommerce.Application.Features.Categories.Commands.Create;
 
-public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>,ISecuredRequest
+public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>,ISecuredRequest,ILoggableRequest
 {
     public string Name { get; set; }
     public string[] Roles => [GeneralOperationClaims.Admin];

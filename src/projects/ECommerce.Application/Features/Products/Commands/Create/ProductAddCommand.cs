@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Application.Pipelines.Authorization;
+using Core.Application.Pipelines.Caching;
 using Core.Application.Pipelines.Logging;
 using Core.Security.Constants;
 using ECommerce.Application.Features.Products.Rules;
@@ -9,7 +10,7 @@ using MediatR;
 
 namespace ECommerce.Application.Features.Products.Commands.Create;
 
-public class ProductAddCommand : IRequest<ProductAddResponseDto>,ISecuredRequest ,ILoggableRequest
+public class ProductAddCommand : IRequest<ProductAddResponseDto>,ISecuredRequest ,ILoggableRequest, ICacheRemoverRequest
 {
     public string Name { get; set; }
     public decimal Price { get; set; }
@@ -18,6 +19,10 @@ public class ProductAddCommand : IRequest<ProductAddResponseDto>,ISecuredRequest
 
     public int CategoryId { get; set; }
     public string[] Roles => [GeneralOperationClaims.Admin];
+
+    public string CacheKey => "";
+    public bool ByPassCache => false;
+    public string? CacheGroupKey => "Products";
 
 
 
