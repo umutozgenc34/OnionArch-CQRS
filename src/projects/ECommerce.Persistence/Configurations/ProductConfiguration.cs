@@ -25,7 +25,8 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             .WithOne(i => i.Product)
             .HasForeignKey(i => i.ProductId)
             .OnDelete(DeleteBehavior.NoAction);
-  
+
+        builder.Navigation(x => x.Category).AutoInclude();
         builder.HasQueryFilter(p => !p.DeletedDate.HasValue);
     }
 }
