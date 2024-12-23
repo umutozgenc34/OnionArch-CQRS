@@ -3,6 +3,8 @@ using Core.Security;
 using Core.Security.Encryption;
 using Core.Security.JWT;
 using ECommerce.Application;
+using ECommerce.Infrastructure;
+using ECommerce.Infrastructure.CloudinaryServices;
 using ECommerce.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
@@ -35,6 +37,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     }
     );
 
+builder.Services.AddInfrastructureDependencies(builder.Configuration);
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

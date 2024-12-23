@@ -4,6 +4,7 @@ using ECommerce.Application.Features.Categories.Commands.Delete;
 using ECommerce.Application.Features.Categories.Queries.GetById;
 using ECommerce.Application.Features.Categories.Queries.GetList;
 using ECommerce.Application.Features.Categories.Queries.GetListByPaginate;
+using ECommerce.Infrastructure.CloudinaryServices;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,7 @@ namespace ECommerce.WebAPI.Controllers;
 public class CategoriesController : ControllerBase
 {
     private readonly IMediator _mediator;
+    
     public CategoriesController(IMediator mediator)
     {
         _mediator = mediator;
@@ -63,4 +65,5 @@ public class CategoriesController : ControllerBase
         await _mediator.Send(command);
         return Ok(command);
     }
+
 }
